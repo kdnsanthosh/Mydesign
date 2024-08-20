@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                 
+         
+        <!-- title-->
+        <title>Aura Harks Technology</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Condensed:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="{% static 'images/harks-logo.png' %}" alt="Aura Harks Technology">
+                <span>AURA HARKS TECHNOLOGY</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'home' %}">About</a></li>
+                    <li><a href="{% url 'home' %}">Services</a></li>
+                    <li><a href="{% url 'home' %}">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <!-- <li><a href="#blog">Blog</a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <div class="hero-text">
+                <div class="hero-content">
+                    <h1 class="hero-title">Contact</h1>
+                    <p class="hero-text">We are here to help you.</p>
+                </div>
+                <div class="btn-primary">
+                    <a href="{% url 'home' %}">Home</a>
+                    <span> >> </span>
+                    <a href="{% url 'contact' %}">Contact</a>
+                </div>
+            </div>
+        </div>
+    </section>
+     
+
+    <section id="contact">
+        <div class="contact-content">
+            <div class="contact-left-container">
+                <div class="contact-left">
+                    <h4>CONTACT INFO</h4>
+                    <div class="contact-item ">
+                        <img src="{% static 'images/contact1.png' %}" alt="Product Development">
+                        <h3>Location</h3>
+                        <p>Kumaran Kudil Main Rd, Parthasarathy Nagar, Mettukuppam, Thoraipakkam, Tamil Nadu 600097</p>
+                    </div>
+                    <div class="contact-item ">
+                      <img src="{% static 'images/contact2.png' %}" alt="Web Development">
+                      <h3>Phone</h3>
+                      <p>+91-7845493457</p>
+                    </div>
+                    <div class="contact-item">
+                        <img src="{% static 'images/contact3.png' %}" alt="Web Development">
+                        <h3>Email</h3>
+                        <p>info@harkscorp.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-right-container">
+                <div class="contact-form">
+                    <form>
+                        <h1>SEND US A MESSAGE</h1>
+                        <input type="text" id="name" name="name" required placeholder="Your Name:">
+                        <input type="email" id="email" name="email" required placeholder="Your Email:">
+                        <textarea id="message" name="message" required placeholder="Your Message:"></textarea>
+                        <button type="submit">Send Now</button>
+                    </form>
+                </div>
+            </div>
+         </div>
+    </section>
+    
+
+    
+      
+      
+
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.9265854344965!2d80.22505081423395!3d13.008226790804488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5262dc0f65e3b5%3A0x111c9e9d23e2f3e7!2sKumaran%20Kudil%20Main%20Rd%2C%20Parthasarathy%20Nagar%2C%20Mettukuppam%2C%20Thoraipakkam%2C%20Tamil%20Nadu%20600097!5e0!3m2!1sen!2sin!4v1633481812687!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    
+
+
+    
+    
+    <section class="footer" id="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="{% static 'images/harks-logo.png' %}" alt="Aura Harks Technology">
+                <span>Aura Harks Technology</span>
+               <p>Your Trusted Partner in Tech Solutions.Analytics solution delivers actionable insights for informed decisions.</p>
+                <p class="footer-contact" style="margin-top: 50px;width:50px; margin-left: 20px;">
+                    <img src="{% static 'images/footer-call-us-icon.png' %}" alt="footer-call-us-icon"> 
+                    Callus:&nbsp;<a href="tel:+917845493857" style="width: 200px; margin-left: 5px; font-size: 0.9em;" >+91-7845493857</a>
+                   <img src="{% static 'images/footer-email-icon.png' %}" alt="footer-email-us-icon" style="margin-left:25px;"> 
+                    Emailus:<br/><a href="mailto:info@harkscorp.com" style="margin-left: 5px;">info@harkscorp.com</a>
+                    
+                </p>
+            </div>
+    
+            <div class="footer-links" style="margin-left: 140px;">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'home' %}">About</a></li>
+                    <li><a href="{% url 'home' %}">Services</a></li>
+                    <li><a href="{% url 'home' %}">Pricing</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-services" style="margin-right: 350px;">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="#services">Web Application Development</a></li>
+                    <li><a href="#services">Product Development</a></li>
+                    <li><a href="#services">Data Analysis</a></li>
+                    <li><a href="#services">AI & ML Design and Development</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-strip">
+            <img src="{% static 'images/footer-u-design.png' %}" >
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Aura Harks Technology. All rights reserved.
+                <span><a href="https://www.linkedin.com" class="footer-social" target="_blank" style="margin-left:450px;"><i class="fab fa-linkedin-in"></i></a></span>
+                <span>&nbsp;<a href="https://plus.google.com" class="footer-social" target="_blank" style="margin-right: 300px;"><i class="fab fa-google-plus-g"></i></a></span>
+            </p>
+        </div>
+    </section>
+
+
+    <script>
+        // Show/hide the "Move to Top" button based on scroll position
+        document.addEventListener('scroll', function() {
+        const button = document.getElementById('moveToTopBtn');
+        if (window.scrollY > 300) {
+            button.classList.add('show');
+        } else {
+            button.classList.remove('show');
+        }
+    });
+
+    // Smooth scroll to top when the button is clicked
+    document.getElementById('moveToTopBtn').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+
+    </script>
+
+    <a href="#top" class="move-to-top" id="moveToTopBtn">
+    <i class="fas fa-chevron-up"></i>
+</a>
+</body>
+</html>
+    

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title and Meta Description -->
+    <title>{% block title %}Aura Harks Technology | IT Services & Solutions{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}Aura Harks Technology delivers cutting-edge IT services and solutions. From product development and web development to data analysis and AI & ML design, we empower your business with expert solutions.{% endblock %}">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{% block canonical_url %}https://www.example.com/{% endblock %}">
+
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="{% block og_title %}Aura Harks Technology | IT Services & Solutions{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Aura Harks Technology provides advanced IT services and solutions including product development, web development, data analysis, and AI & ML design.{% endblock %}">
+    <meta property="og:image" content="{% static 'images/hero1.webp' %}">
+    <meta property="og:url" content="{% block og_url %}https://www.example.com/{% endblock %}">
+    <meta property="og:type" content="website">
+
+    
+    <!-- LinkedIn Meta Tags -->
+    <meta property="linkedin:title" content="{% block linkedin_title %}Aura Harks Technology | IT Services & Solutions{% endblock %}">
+    <meta property="linkedin:description" content="{% block linkedin_description %}Aura Harks Technology provides advanced IT services and solutions including product development, web development, data analysis, and AI & ML design.{% endblock %}">
+    <meta property="linkedin:image" content="{% static 'images/hero1.webp' %}">
+
+   
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Condensed:wght@100..900&display=swap" rel="stylesheet">
+     
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Aura Harks Technology",
+          "url": "https://www.example.com/",
+          "logo": "{% static 'images/harks-logo.png' %}",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-7845493857",
+            "contactType": "Customer Service"
+          }
+        }
+        </script>
+        
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="{% static 'images/harks-logo.png' %}" alt="Aura Harks Technology Logo">
+                <span>AURA HARKS TECHNOLOGY</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-text">
+                <div class="hero-social-icons">
+                    <a href="https://www.linkedin.com" class="social-icon" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://plus.google.com" class="social-icon" target="_blank" aria-label="Google+ Profile"><i class="fab fa-google-plus-g"></i></a>
+                </div>
+                <div class="hero-content">
+                    <h5 class="hero-title">WE PROVIDE OUTSOURCED</h5>
+                    <h1 class="hero-tile">IT SERVICES & SOLUTIONS</h1>
+                    <p class="hero-text">We empower businesses to optimize operations, enhance productivity, and drive growth in the digital age. Our Automated Reporting and Analytics solution delivers actionable insights for informed decisions.</p>
+                </div>
+                <br/>
+                <a href="{% url 'contact' %}" class="btn-get-started">Get Started</a>
+                <a href="{% url 'contact' %}" class="btn-get-started-secondary">Contact Us</a>
+            </div>
+            <div class="hero-strip"></div>   <!-- Color strip -->
+            <div class="hero-image">
+                <img src="{% static 'images/hero1.webp' %}" alt="Hero Image showcasing IT services">
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="services-content">
+            <div class="services-left-container">
+                <div class="services-left">
+                    <div class="service-item grid-item">
+                        <img src="{% static 'images/service1.png' %}" alt="Product Development">
+                        <h3>Product Development</h3>
+                        <p>Effective product development requires a blend of innovation.</p>
+                    </div>
+                    <div class="service-item grid-item">
+                        <img src="{% static 'images/service2.png' %}" alt="Web Development">
+                        <h3>Web Development</h3>
+                        <p>Involves creating software that runs on web servers.</p>
+                    </div>
+                    <div class="service-item grid-item">
+                        <img src="{% static 'images/service3.png' %}" alt="Data Analysis">
+                        <h3>Data Analysis</h3>
+                        <p>Transforming raw information into actionable insights that guide strategic decision-making.</p>
+                    </div>
+                    <div class="service-item grid-item">
+                        <img src="{% static 'images/service4.png' %}" alt="AI & ML Design and Development">
+                        <h3>AI & ML Design and Development</h3>
+                        <p>We will elevate brands to new heights of digital excellence.</p>
+                    </div>
+                </div>
+                <div class="services-right">
+                    <h4>OUR SERVICES</h4>
+                    <h2>BEST IT SOLUTION FOR YOUR BUSINESS</h2>
+                    <p>Your business depends on your specific needs, goals, and constraints. Developing custom software applications, our tailored approach ensures that we identify and deploy the most effective IT solutions to propel your business forward in the digital age.</p>
+                    <ul>
+                        <li>Responsive IT support and maintenance services</li>
+                        <li>Streamlined workflow automation for improved efficiency</li>
+                        <li>Advanced data analytics tools for insightful decision-making</li>
+                        <li>Robust cybersecurity solutions to safeguard data and assets</li>
+                    </ul>
+                    <a href="{% url 'contact' %}" class="btn-get-started">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container" style="height:10%;">
+            <div class="about-image">
+                <img src="{% static 'images/about-us-main-image.jpg' %}" alt="About Us Main Image" class="main-image">
+                <img src="{% static 'images/about-us-small-image.jpg' %}" alt="About Us Overlay Image" class="overlay-image">
+            </div>
+    
+            <div class="about-text">
+                <div class="about-content">
+                    <h5 class="about-title">ABOUT US</h5>
+                    <h1 class="about-tile">WE HELP CLIENTS INVENT THEIR FUTURE.</h1>
+                    <p class="about-text">We’re your trusted partner in navigating the complexities of the digital landscape. Our team of experts combines technical expertise with a deep understanding of industry trends to craft holistic strategies that drive growth, enhance efficiency, and exceed expectations.</p>
+                </div>
+                <a href="#pricing" class="btn-get-started">Read More</a>
+            </div>
+        </div>
+        <div class="about-strip"></div> <!-- Positioned here to align with the container -->
+    </section>
+    
+    <section id="pricing">
+        <div class="best-offers">
+            <h5>BEST OFFERS</h5>
+            <h2>OUR PRICING PLANS</h2>
+            <p>We believe in transparency, which is why our pricing is clear and straightforward. You’ll know exactly what you’re paying for and what you’ll receive in return, with no hidden fees or surprises.</p>
+        </div>
+        <div class="pricing-container" style="width:100%;">
+            <div class="pricing-box" style="width:100px; margin-right:30px;">
+                <img src="{% static 'images/basic-plan-icon.png' %}" alt="Basic Plan Icon">
+                <h3>Basic Plan</h3>
+                <p class="price">$27.99</p>
+                <ul>
+                    <li>Ad Management</li>
+                    <li>Live Chat</li>
+                    <li>Multi-Language Content</li>
+                    <li>Conversational Bots</li>
+                    <li>Programmable Chatbots</li>
+                </ul>
+                <a href="{% url 'contact' %}" class="btn-get-started">Get Started</a>
+            </div>
+            <div class="pricing-box">
+                <img src="{% static 'images/silver-plan.png' %}" alt="Silver Plan Icon">
+                <h3>Silver Plan</h3>
+                <p class="price">$37.99</p>
+                <ul>
+                    <li>Ad Management</li>
+                    <li>Live Chat</li>
+                    <li>Multi-Language Content</li>
+                    <li>Conversational Bots</li>
+                    <li>Programmable Chatbots</li>
+                </ul>
+                <a href="{% url 'contact' %}" class="btn-get-started">Get Started</a>
+            </div>
+            <div class="pricing-box">
+                <img src="{% static 'images/gold-plan.png' %}" alt="Gold Plan Icon">
+                <h3>Gold Plan</h3>
+                <p class="price">$47.99</p>
+                <ul>
+                    <li>Ad Management</li>
+                    <li>Live Chat</li>
+                    <li>Multi-Language Content</li>
+                    <li>Conversational Bots</li>
+                    <li>Programmable Chatbots</li>
+                </ul>
+                <a href="{% url 'contact' %}" class="btn-get-started">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer" id="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="{% static 'images/harks-logo.png' %}" alt="Aura Harks Technology Logo">
+                <span>Aura Harks Technology</span>
+                <p>Your Trusted Partner in Tech Solutions. Analytics solution delivers actionable insights for informed decisions.</p>
+                <p class="footer-contact" style="margin-top: 50px; width:50px; margin-left: 20px;">
+                    <img src="{% static 'images/footer-call-us-icon.png' %}" alt="Call Us Icon"> 
+                    Call us: <a href="tel:+917845493857" style="width: 200px; margin-left: 5px; font-size: 0.9em;">+91-7845493857</a>
+                    <img src="{% static 'images/footer-email-icon.png' %}" alt="Email Us Icon" style="margin-left:25px;"> 
+                    Email us: <br><a href="mailto:info@harkscorp.com" style="margin-left: 5px;">info@harkscorp.com</a>
+                </p>
+            </div>
+
+            <div class="footer-links" style="margin-left: 140px;">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-services" style="margin-right: 350px;">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="#services">Web Application Development</a></li>
+                    <li><a href="#services">Product Development</a></li>
+                    <li><a href="#services">Data Analysis</a></li>
+                    <li><a href="#services">AI & ML Design and Development</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-strip">
+            <img src="{% static 'images/footer-u-design.png' %}" alt="Footer Design">
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Aura Harks Technology. All rights reserved.
+                <span><a href="https://www.linkedin.com" class="footer-social" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a></span>
+                <span>&nbsp;<a href="https://plus.google.com" class="footer-social" target="_blank" aria-label="Google+ Profile"><i class="fab fa-google-plus-g"></i></a></span>
+            </p>
+        </div>
+    </section>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.classList.add('animate');
+            }
+        });
+
+        document.addEventListener('scroll', function() {
+            const button = document.getElementById('moveToTopBtn');
+            if (button) {
+                if (window.scrollY > 300) {
+                    button.classList.add('show');
+                } else {
+                    button.classList.remove('show');
+                }
+            }
+        });
+
+        document.getElementById('moveToTopBtn')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+    <a href="#top" class="move-to-top" id="moveToTopBtn">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+</body>
+</html>
